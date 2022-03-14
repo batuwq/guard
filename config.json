@@ -1,0 +1,87 @@
+{
+    "bot": {
+        "owner": "7708331754603151473",
+        "prefix": "!",
+        "BotStatus": "Moderatör Botu",
+        "BotFooter": "Moderatör Botu",
+        "cooldown": 8
+    },
+    "penals": {
+        "ban": {
+            "staff": "951124496939622440",
+            "log": "951124501234585659",
+            "limit": 3
+        },
+        "jail": {
+            "staff": "951124496939622438",
+            "roles": "951124496872534061",
+            "log": "951124501423341620",
+            "limit": 5
+        },
+        "mute": {
+            "staff": "951124496939622439",
+            "roles": "951124496914452511",
+            "log": "951124501234585658",
+            "limit": 5
+        },
+        "warn": {
+            "staff": "951124496872534060",
+            "log": "951124501423341624"
+        },
+        "transport": {
+            "staff": "951124496872534059"
+        },
+        "points": {
+            "mutepoints": "10",
+            "banpoints": "30",
+            "jailpoints": "20",
+            "warnpoints": "5"
+        }
+    },
+    "logs": {
+        "taglog": "951124501423341621",
+        "rollog": "951124501423341622",
+        "seslog": "951124501423341623"
+    },
+    "roles": {
+        "vip": "951124496939622437",
+        "sponsor": "951124496872534062",
+        "müzisyen": "951124496872534063",
+        "team": "951124496872534064"
+    },
+    "channels": {
+        "chat": "951124498877403230",
+        "voicechannel": "951124497954648108",
+        "welcomechannel": "951124497954648106",
+        "rules": "951124498411823147"
+    },
+    "registration": {
+        "unregistered": "951124496914452513",
+        "man" : ["951124496939622434",  "951124496939622434"],
+        "woman": ["951124496939622433", "951124496939622434"],
+        "yetkilialim": "951124496872534065",
+        "staff": "951124496969007195",
+        "enaltyetkilirolü": "951124496939622436",
+        "GuilDTag": "★",
+        "TagSymbol": "★",
+        "autonickname": "$ İsim | Yaş",
+        "symbol": "|",
+        "suspecios": "951124496914452510",
+        "susoeciosnickname": "Şüpheli Hesap",
+        "oneman": "951124496939622434",
+        "onewoman": "951124496939622434",
+        "minage": 13, 
+        "purchase": false
+    },
+    "Guild": {
+        "GuildID": "951124496872534058",
+        "GuilDName": "Artemis #Soon",
+        "GuildOwnerRole": ["951124496969007203"]
+    },
+    "emojis": {
+        "tada": "🎉",
+        "yes": "✅",
+        "no": "🚫"
+
+    }
+} 
