@@ -1,24 +1,24 @@
 {
 
     "Server": {
-        "Id": "SUNUCU ID"
+        "Id": "951124496872534058"
     },
 
     "Roles": {
-        "Jail_Role": "CEZALI ROL ID",
-        "Booster_Role": "BOOSTER ROL ID"
+        "Jail_Role": "951124496872534061",
+        "Booster_Role": "951124496939622437"
     },
 
     "Channels": {
-        "Channel_Log": "KANAL KORUMA LOG",
-        "Role_Log": "ROL KORUMA LOG",
-        "Other_Log": "SUNUCU KORUMA LOG",
-        "Right_Click": "SAĞ TIK KORUMA LOG"    
+        "Channel_Log": "951443125350563910",
+        "Role_Log": "951443125350563910",
+        "Other_Log": "951443125350563910",
+        "Right_Click": "951443125350563910"    
     },
 
     "Emojis": {
-        "Check": "TİK EMOJİ ID",
-        "Delete": "ÇARPI EMOJİ ID"
+        "Check": "952963473183232010",
+        "Delete": "952963375414009887"
     },
 
     "Embed": {

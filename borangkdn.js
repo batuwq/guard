@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const ayarlar = require("./ayarlar.json");
 const fs = require("fs");
 const moment = require("moment");
+const token = require("./token.json");
 
 const {MessageEmbed} = require("discord.js")
 const db = require("quick.db")
@@ -1141,6 +1142,7 @@ message.member.roles.add(küfürrol)
 	}
 	  });
 
+  const matthe = require('./matthe.json')
 
     client.on("guildBanAdd", async function (guild, user) {
       const entry = await guild

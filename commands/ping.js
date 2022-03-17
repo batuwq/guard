@@ -28,34 +28,33 @@ module.exports = {
 data: new SlashCommandBuilder()
     .setName("yetkili-alım")
     .setDescription("yetkili alım başvurusu yaparsınız.")
-    ,execute(interaction, client) {
+    ,execute(interaction, client, messagecreate) {
   
   let db = require("quick.db")
   db.set("sorular_" + interaction.user.id, [])
 interaction.reply({embeds: [Embed("Yetkili alım komutu!","Yetkili alım başvurusu yapmak istediğinize eminseniz ``başla`` yazınız. Eğer değilseniz `iptal` yazın.","info")], ephemeral: true})
 let filter = message => message.author.id == interaction.user.id && message.content == "başla" || message.content == "iptal"
 let filter2 = message => message.author.id == interaction.user.id
-let hazırfilter = filt => {return {time: 60000, errors: ["time"], max: 1, filter: filt}}
 let i = 1
 let cevaplar = []
-interaction.channel.awaitMessages(hazırfilter(filter)).then(c => {
+interaction.channel.awaitMessages((filter)).then(c => {
 let start = c.first()
 if(start.content == "başla") {
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu başladı",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c1 => {
+interaction.channel.awaitMessages((filter2)).then(c1 => {
 let msg1 = c1.first()
 cevaplar.push(msg1)
 msg1.delete()
 i++
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c2 => {
+interaction.channel.awaitMessages((filter2)).then(c2 => {
 let msg2 = c2.first()
 cevaplar.push(msg2)
 msg2.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c3 => {
+interaction.channel.awaitMessages((filter2)).then(c3 => {
 let msg3 = c3.first()
 cevaplar.push(msg3)
 msg3.delete()
@@ -63,21 +62,21 @@ i++
 
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c4 => {
+interaction.channel.awaitMessages((filter2)).then(c4 => {
 let msg4 = c4.first()
 cevaplar.push(msg4)
 msg4.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c5 => {
+interaction.channel.awaitMessages((filter2)).then(c5 => {
 let msg5 = c5.first()
 cevaplar.push(msg5)
 msg5.delete()
 
 i++
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c6 => {
+interaction.channel.awaitMessages((filter2)).then(c6 => {
 let msg6 = c6.first()
 cevaplar.push(msg6)
 msg6.delete()
@@ -85,84 +84,84 @@ msg6.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c7 => {
+interaction.channel.awaitMessages((filter2)).then(c7 => {
 let msg7 = c7.first()
 cevaplar.push(msg7)
 msg7.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c8 => {
+interaction.channel.awaitMessages((filter2)).then(c8 => {
 let msg8 = c8.first()
 cevaplar.push(msg8)
 msg8.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c9 => {
+interaction.channel.awaitMessages((filter2)).then(c9 => {
 let msg9 = c9.first()
 cevaplar.push(msg9)
 msg9.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c10 => {
+interaction.channel.awaitMessages((filter2)).then(c10 => {
 let msg10 = c10.first()
 cevaplar.push(msg10)
 msg10.delete()
 
 i++
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c11 => {
+interaction.channel.awaitMessages((filter2)).then(c11 => {
 let msg11 = c11.first()
 cevaplar.push(msg11)
 msg11.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c12 => {
+interaction.channel.awaitMessages((filter2)).then(c12 => {
 let msg12 = c12.first()
 cevaplar.push(msg12)
 msg12.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c13 => {
+interaction.channel.awaitMessages((filter2)).then(c13 => {
 let msg13 = c13.first()
 cevaplar.push(msg13)
 msg13.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c14 => {
+interaction.channel.awaitMessages((filter2)).then(c14 => {
 let msg14 = c14.first()
 cevaplar.push(msg14)
 msg14.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c15 => {
+interaction.channel.awaitMessages((filter2)).then(c15 => {
 let msg15 = c15.first()
 cevaplar.push(msg15)
 msg15.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c16 => {
+interaction.channel.awaitMessages((filter2)).then(c16 => {
 let msg16 = c16.first()
 cevaplar.push(msg16)
 msg16.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu devam ediyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c17 => {
+interaction.channel.awaitMessages((filter2)).then(c17 => {
 let msg17 = c17.first()
 cevaplar.push(msg17)
 msg17.delete()
 i++
 
 interaction.followUp({embeds: [Embed("Yetkili alım başvurusu bitiyor",i+". Soru: "+ sorular[i-1],"info")], ephemeral: true}) 
-interaction.channel.awaitMessages(hazırfilter(filter2)).then(c18 => {
+interaction.channel.awaitMessages((filter2)).then(c18 => {
 let msg18 = c18.first()
 cevaplar.push(msg18)
 msg18.delete()
